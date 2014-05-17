@@ -1,0 +1,7 @@
+form.checklist(role='main')
+
+  each card, index in cards
+    section.card(data-importance="#{card.importance}")
+      input.toggleCard(id="card#{index}" type="checkbox")
+      label.toggleCard(for="card#{index}" tabindex="2" aria-label="testing")
+      h3(tabindex='1') #{card.title}

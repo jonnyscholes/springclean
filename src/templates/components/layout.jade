@@ -1,0 +1,50 @@
+include mixins
+block config
+  include config
+doctype html
+!= "<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->"
+!= "<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->"
+!= "<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->"
+!= "<!--[if gt IE 8]><!-->"
+html.no-js
+  != "<!--<![endif]-->"
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title=pageTitle
+
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    |<script type="text/javascript" src="//use.typekit.net/yzl4dot.js"></script>
+    |<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    // build:css css/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+
+  body(class=bodyClass || '')
+
+    block header
+      include header
+
+    block content
+
+
+    // build:js js/main.js
+    script(src='scripts/vendor/jquery-1.9.1.js')
+    script(src='scripts/plugins.js')
+    script(src='scripts/main.js')
+    // endbuild
+
+
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
