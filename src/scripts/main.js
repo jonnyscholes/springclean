@@ -22,11 +22,11 @@ function progress() {
 
   inputs.each(function(i, elm){
     this.checked = false;
-    total += $(elm).parent().data('importance');
+    total += $(elm).parent().parent().data('importance');
   });
 
   inputs.change(function(){
-    var importance = $(this).parent().data('importance');
+    var importance = $(this).parent().parent().data('importance');
     this.checked ? current += importance : current -= importance;
     $(this).parent().find('.tabbed-zones .zone').removeClass('active');
     progressElm.css('height', Math.floor(current/total*100)+'%');
