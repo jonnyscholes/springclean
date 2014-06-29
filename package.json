@@ -28,7 +28,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "david; gulp; gulp watch",
+    "start": "gulp; gulp watch",
     "watch": "gulp watch",
     "check": "david",
     "build": "gulp",

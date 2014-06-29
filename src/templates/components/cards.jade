@@ -1,7 +1,189 @@
 form.checklist(role='main')
 
-  each card, index in cards
-    section.card(data-importance="#{card.importance}")
-      input.toggleCard(id="card#{index}" type="checkbox")
-      label.toggleCard(for="card#{index}" tabindex="2" aria-label="testing")
-      h3(tabindex='1') #{card.title}
+  section.card(data-importance="9")
+    div.content
+      input.toggle-card(id="card1" type="checkbox")
+      label.toggle-card(for="card1")
+      h3 Change passwords on all websites
+      a(href="#" aria-label="More Information").toggle-info.icon-info
+
+      div.information
+        h4 Why?
+        p Over time the more sites you use, the more likely it is that one of them has been compromised and that your password has been leaked. If you havnt changed your password on that service, then someone other than you has ongoing access to that account.
+        h4 But I dont care if someone can read my =insert service gone unused for 5 years=
+        p Fair enough. But most of the time it's not that simple.
+        p When details get leaked from a website more often than not the attacker gets a more information than just your password. Usernames, emails, birthdays and all sorts of other information often accompany your password.
+        p Attackers can use this information to find more of your profiles. Do you use the same password for more than one website? Uh oh. Now all your data is in the hands of some pesky hackers who WILL use it.
+        h4 How should I go about fixing this?
+        p You should have a unique password for each of the services you use. You can use one of the follwing tools to make this actually manageable. Here is are some good reviews of the top tools:
+        ul
+          li 
+            a(href='http://thenextweb.com/apps/2013/10/06/10-of-the-best-multi-platform-password-managers-for-ios-android-and-the-desktop/')
+              |10 of the best multi-platform password managers for iOS, Android and the desktop
+          li
+            a(href='http://www.pcmag.com/article2/0,2817,2407168,00.asp')
+              |The Best Password Managers
+        p Can't find one you like? Look at them again.
+        p Still no luck? Seriously? Ok. The next best thing is to have a series of passwords:
+        ul
+          li 1 for <b>each</b> of your banks
+          li 1 for <b>each</b> of your bank connected apps (eg paypal, xbox live)
+          li 1 for your buisness critical applications (eg email, CMS login)
+          li 1 for your social sites (eg Facebook, Twitter, okCupid)
+          li 1 for everything else
+        p But seriously, put in the time to learn one of the above tools and do it properly. It will save you doing all this again in the near future
+        p Want to know more? Here is some further reading on the topic of passwords
+        ul
+          li 
+            a(href="https://www.google.com.au/goodtoknow/online-safety/passwords/")
+              | Googles 'Secure your passwords' help page
+
+  section.card(data-importance="9")
+    div.content
+      input.toggle-card(id="card2" type="checkbox")
+      label.toggle-card(for="card2")
+      h3 Use a modern and secure browser
+      a(href="#" aria-label="More Information").toggle-info.icon-info
+
+      div.information
+        h4 Why?
+        p Web browsers are like cars. Cars that you use to drive the highways of the web. Your browser holds all sorts of interesting information about you. 
+        ul 
+          li Sites you've visted
+          li Keys to sites you're currently logged in to
+          li Doors into other parts of your computer where you keep your files
+        p As time goes by, browsers get changes - new features and tools. But also lots of updates to security. By not updating your browser you are basically leaving your car unlocked with your wallet on the seat busting at the seams with fifties. 
+        p Do yourself - and every web developer out there - a huge favour and update to a modern browser. One of the following will suffice:
+        ul
+          li 
+            a(href="https://www.mozilla.org/en-US/firefox/") Firefox
+          li 
+            a(href="https://www.google.com/intl/en_au/chrome/browser/") Google Chrome
+          li 
+            a(href="https://www.opera.com/") Opera
+        p A note: <b>this also applies to mobile users</b>.
+        p Some related literature on the subject:
+        ul
+          li
+            a(href="http://www.smashingmagazine.com/2012/07/10/dear-web-user-please-upgrade-your-browser/") Dear Web User: Please Upgrade Your Browser
+
+
+  section.card(data-importance="9")
+    div.content
+      input.toggle-card(id="card3" type="checkbox")
+      label.toggle-card(for="card3")
+      h3 Secure my home and business WiFi networks
+      a(href="#" aria-label="More Information").toggle-info.icon-info
+
+      div.information
+        h4 Why?
+        p There are 2 main reasons you dont want your wifi open to the world.
+        ol
+          li Having your data stolen
+          li Someone using your network for nasty deeds
+        h4 Your network, your data
+        p The internet works by sending and recieving little chunks of data. Anyone connected to the same network has access to those chunks and can piece them back together into their human readable form. This includes text, audio and video as well as browser data like keys to currently logged in websites.
+        p By not securing your network you are opeing up your network to eavesdropping. Someone could be parked in a van 2 streets away with a computer right now slurping up everything that goes on in your network. 
+        ul
+          li Just sent a sensitive work document to a client? Stolen.
+          li Logged into your corperate network from home? Oops. Now so is someone else.
+          li Sent your son a copy of his passport because he left it home and needs it? Oh dear now it's en route to an identity theft outfit.
+        h4 Your network should be YOUR network
+        p Individuals who use the Internet for various illegal activities naturally do not want to be found. To help mask their identites often they will use other peoples unsecured networks to do bad things.
+        h4 How?
+        p There are hundreds of routers out there, and they all have various ways to secure them. But below are some buzzwords to either include in a search or pass on to your tech guru you've given a bottle of sav blonc to to help you out:
+        ul
+          li WPA2 is a minimum. WEP is practically useless - all modern routers support WPA2 anyway. So use it.
+          li Your default router password is not good enough. Some companies randomise the passwords - some do not. Play it safe and change it.
+          li Follow good password practices - #[a(href="https://strongpasswordgenerator.com/") strongpasswordgenerator.com] has some good tips and a generator utility too.
+
+  section.card(data-importance="8")
+    div.content
+      input.toggle-card(id="card4" type="checkbox")
+      label.toggle-card(for="card4")
+      h3 Change all my online banking passwords
+
+  section.card(data-importance="8")
+    div.content
+      input.toggle-card(id="card5" type="checkbox")
+      label.toggle-card(for="card5")
+      h3 Use a passcode on my tablet/phone
+      a(href="#" aria-label="More Information").toggle-info.icon-info
+
+      div.information
+        h4 Why?
+        p Would you go out and leave your house door unlocked and wide open? I didnt think so. Not having a passcode on your phone or laptop is exactly the same.
+        p These days your devices have more personal information and access to your life than ever. It only takes seconds for someont to take advantage of this. 
+        p Put a passcode of some kind on all your devices now
+        ul
+          li
+            a(href="https://support.apple.com/kb/ht4113") Learn how to set up, use, and change a passcode on your iOS device.
+          li 
+            a(href="http://phandroid.com/2014/03/20/android-101-lock-screen/") How to setup a lock-screen pattern, PIN or password on your Android device
+
+
+  section.card(data-importance="5")
+    div.content
+      input.toggle-card(id="card6" type="checkbox")
+      label.toggle-card(for="card6")
+      h3 Ensure 'recovery email' has a strong password and security questions
+
+  section.card(data-importance="2")
+    div.content
+      input.toggle-card(id="card7" type="checkbox")
+      label.toggle-card(for="card7")
+      h3 Deauthorise unused Facebook apps
+
+  section.card(data-importance="2")
+    div.content
+      input.toggle-card(id="card8" type="checkbox")
+      label.toggle-card(for="card8")
+      h3 Deauthorise unused Twitter apps
+
+  section.card(data-importance="3")
+    div.content
+      input.toggle-card(id="card9" type="checkbox")
+      label.toggle-card(for="card9")
+      h3 Review Facebook privacy settings
+
+  section.card(data-importance="3")
+    div.content
+      input.toggle-card(id="card10" type="checkbox")
+      label.toggle-card(for="card10")
+      h3 Review Twitter privacy settings
+
+  section.card(data-importance="1")
+    div.content
+      input.toggle-card(id="card11" type="checkbox")
+      label.toggle-card(for="card11")
+      h3 Review old website/forum signatures
+
+  section.card(data-importance="1")
+    div.content
+      input.toggle-card(id="card12" type="checkbox")
+      label.toggle-card(for="card12")
+      h3 Review email signatures
+
+  section.card(data-importance="2")
+    div.content
+      input.toggle-card(id="card13" type="checkbox")
+      label.toggle-card(for="card13")
+      h3 Check what information is available via my domain names
+
+  section.card(data-importance="2")
+    div.content
+      input.toggle-card(id="card14" type="checkbox")
+      label.toggle-card(for="card14")
+      h3 Disable Flash by default
+
+  section.card(data-importance="3")
+    div.content
+      input.toggle-card(id="card15" type="checkbox")
+      label.toggle-card(for="card15")
+      h3 Disable Java by default
+
+  section.card(data-importance="2")
+    div.content
+      input.toggle-card(id="card16" type="checkbox")
+      label.toggle-card(for="card16")
+      h3 Install HTTPS Everywhere

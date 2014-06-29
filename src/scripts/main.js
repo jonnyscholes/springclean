@@ -1,13 +1,24 @@
 (function() {
   progress();
-  tabs();
+
+  var checklist = $('.checklist');
+  var cards = $('.card');
+
+  cards.find('.toggle-info').click(function(e) {
+    e.preventDefault();
+
+    $(this).parent().parent().toggleClass('active');
+    checklist.toggleClass('card-active');
+    $(this).toggleClass('icon-info');
+    $(this).toggleClass('icon-close');
+  })
 })(jQuery);
 
 function progress() {
   var total = 0;
   var current = 0;
   var progressElm = $('.progress');
-  var inputs = $('.checklist input.toggleCard');
+  var inputs = $('.checklist input.toggle-card');
 
   inputs.each(function(i, elm){
     this.checked = false;
@@ -20,21 +31,4 @@ function progress() {
     $(this).parent().find('.tabbed-zones .zone').removeClass('active');
     progressElm.css('height', Math.floor(current/total*100)+'%');
   });
-
-
-}
-
-function tabs(){
-  var tabLinks = $('.tabs a');
-  var tabZones = $('.tab-content .zone');
-
-  tabLinks.click(function(e){
-    e.preventDefault();
-
-    var i = $(this).data('index');
-    var zones = $(this).parents('.tabbed-zones').find('.tab-content .zone');
-    zones.removeClass('active').filterByData('index', i).addClass('active');
-  });
-
-
 }

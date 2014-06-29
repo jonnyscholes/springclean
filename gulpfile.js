@@ -32,11 +32,8 @@ gulp.task('scripts', function () {
 
 // Templates
 gulp.task('templates', function () {
-  var DATA = require(app + '/cards.json');
-
   return gulp.src(app + '/templates/*.jade')
     .pipe($.jade({
-      locals: DATA
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest(app))
