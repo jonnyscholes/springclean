@@ -31,7 +31,6 @@
     "start": "gulp; gulp watch",
     "watch": "gulp watch",
     "check": "david",
-    "build": "gulp",
-    "bower": "bower install"
+    "build": "gulp"
   }
 }

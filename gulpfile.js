@@ -34,10 +34,10 @@ gulp.task('scripts', function () {
 gulp.task('templates', function () {
   return gulp.src(app + '/templates/*.jade')
     .pipe($.jade({
+      pretty: true
     }))
     .on('error', gutil.log)
-    .pipe(gulp.dest(app))
-    .pipe($.size());
+    .pipe(gulp.dest(app));
 });
 
 // HTML
@@ -72,8 +72,8 @@ gulp.task('images', function () {
 
 // Fonts
 gulp.task('fonts', function () {
-  return gulp.src(app + '/fonts/**/*')
-    .pipe(gulp.dest(dist + '/fonts'))
+  return gulp.src(app + '/font/**/*')
+    .pipe(gulp.dest(dist + '/font'))
     .pipe($.size());
 });
 
